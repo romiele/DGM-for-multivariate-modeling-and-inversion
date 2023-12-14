@@ -1,0 +1,145 @@
+[ZONES]
+ZONESFILE = C:/Users/roberto.miele/OneDrive - Universidade de Lisboa/4.Neural-Transport/2. Facies_Ip//GAN_mg2.pt_1_2///dss/Facies_model_1.out  # File with zones
+NZONES=2  # Number of zones
+
+[HARDDATA1]
+DATAFILE = C:/Users/roberto.miele/OneDrive - Universidade de Lisboa/4.Neural-Transport/2. Facies_Ip////Ip_zone0.gslib  # Hard Data file
+COLUMNS = 4
+XCOLUMN = 1
+YCOLUMN = 2
+ZCOLUMN = 3
+VARCOLUMN = 4
+WTCOLUMN = 0
+MINVAL = 7096.991149658849  # Minimun threshold value
+MAXVAL = 9869.667157436505  # Minimun threshold value
+USETRANS = 1
+TRANSFILE = Cluster.trn  #Transformation file
+
+[HARDDATA2]
+DATAFILE = C:/Users/roberto.miele/OneDrive - Universidade de Lisboa/4.Neural-Transport/2. Facies_Ip////Ip_zone1.gslib  # Hard Data file
+COLUMNS = 4
+XCOLUMN = 1
+YCOLUMN = 2
+ZCOLUMN = 3
+VARCOLUMN = 4
+WTCOLUMN = 0
+MINVAL = 5190.28777320134  # Minimun threshold value
+MAXVAL = 7620.776875878356  # Minimun threshold value
+USETRANS = 1
+TRANSFILE = Cluster.trn  #Transformation file
+
+[HARDDATA]
+ZMIN = 5190.28777320134  # Minimum allowable data value
+ZMAX = 9869.667157436505  # Maximum allowable data value
+LTAIL = 1
+LTPAR = 5190.28777320134
+UTAIL = 1
+UTPAR = 9869.667157436505
+
+[SIMULATION]
+OUTFILE = C:/Users/roberto.miele/OneDrive - Universidade de Lisboa/4.Neural-Transport/2. Facies_Ip//GAN_mg2.pt_1_2///dss/ip_real  # Filename of the resultant simulations
+NSIMS = 30  # Number of Simulations to generate 
+NTRY = 10
+AVGCORR = 1
+VARCORR = 1
+
+[GRID]
+NX = 100
+NY = 1
+NZ = 80
+ORIGX = 1
+ORIGY = 1
+ORIGZ = 1
+SIZEX = 1
+SIZEY = 1
+SIZEZ = 1
+
+[GENERAL]
+NULLVAL = -9999.99 
+SEED = 6906
+USEHEADERS = 1
+FILETYPE = GEOEAS
+
+[SEARCH]
+NDMIN = 1
+NDMAX = 32
+NODMAX = 12
+SSTRAT = 1
+MULTS = 0
+NMULTS = 1
+NOCT = 0
+RADIUS1 = 100
+RADIUS2 = 1
+RADIUS3 = 80
+SANG1 = 0
+SANG2 = 0
+SANG3 = 0
+
+[KRIGING]
+KTYPE = 0  # Kriging type: 0=simple,1=ordinary,2=simple with locally varying mean, 3=external drif, 4=collo-cokrig global CC,5=local CC (KTYPE)
+COLOCORR = 0.75
+SOFTFILE = No File
+LVMFILE = No File
+NVARIL = 1
+ICOLLVM = 1
+CCFILE = No File
+RESCALE = 1
+
+[VARIOGRAMZ1]
+NSTRUCT = 1  # Number of semivariograms structures
+NUGGET = 0  # Nugget constant
+
+[VARIOGRAMZ1S1]
+TYPE = 1
+COV = 1
+ANG1 = 0
+ANG2 = 0
+ANG3 = 0
+AA = 80
+AA1 = 1
+AA2 = 30
+
+[BIHIST1]
+USEBIHIST = 0
+BIHISTFILE = No File
+NCLASSES = 20
+AUXILIARYFILE = No File
+
+[VARIOGRAMZ2]
+NSTRUCT = 1  # Number of semivariograms structures
+NUGGET = 0  # Nugget constant
+
+[VARIOGRAMZ2S1]
+TYPE = 1
+COV = 1
+ANG1 = 0
+ANG2 = 0
+ANG3 = 0
+AA = 80
+AA1 = 1
+AA2 = 50
+
+[BIHIST2]
+USEBIHIST = 0
+BIHISTFILE = No File
+NCLASSES = 20
+AUXILIARYFILE = No File
+
+[DEBUG]
+DBGLEVEL = 1
+DBGFILE = debug.dbg
+
+[COVTAB]
+MAXCTX = 100
+MAXCTY = 1
+MAXCTZ = 80
+
+[BLOCKS]
+USEBLOCKS = 0
+BLOCKSFILE = NoFile
+MAXBLOCKS= 100
+
+[PSEUDOHARD]
+USEPSEUDO = 0
+BLOCKSFILE = No File
+PSEUDOCORR = 0
